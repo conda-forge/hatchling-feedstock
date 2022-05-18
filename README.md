@@ -1,7 +1,7 @@
 About hatchling
 ===============
 
-Home: https://ofek.dev/hatch/latest/
+Home: https://hatch.pypa.io/latest/
 
 Package license: MIT
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatchling-feeds
 
 Summary: Modern, extensible Python build backend
 
-Development: https://github.com/ofek/hatch/tree/master/backend
+Development: https://github.com/pypa/hatch/tree/master/backend
 
 Current build status
 ====================
