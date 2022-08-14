@@ -1,5 +1,5 @@
 {% set name = "hatchling" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatchling-{{ version }}.tar.gz
-  sha256: 4593c90856b0cffe837a862de597335daf52aca4cede8cba584b3c089f223971
+  sha256: daef0cf555a30f2e98cb295c0ac324c66fc66f33c95ea03cb79e1536b1e1f492
 
 build:
   noarch: python
