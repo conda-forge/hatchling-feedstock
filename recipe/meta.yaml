@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - hatchling = hatchling.cli:hatchling
 
@@ -22,14 +22,14 @@ requirements:
     - python >=3.7
     # bootstrapping
     - packaging >=21.3
-    - pathspec >=0.9
+    - pathspec >=0.10.1
     - pluggy >=1.0.0
     - tomli >=2.0
   run:
     - editables >=0.3
     - importlib-metadata
     - packaging >=21.3
-    - pathspec >=0.9
+    - pathspec >=0.10.1
     - pluggy >=1.0.0
     - python >=3.7
     - tomli >=1.2.2
