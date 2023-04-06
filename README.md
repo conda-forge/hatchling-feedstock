@@ -1,11 +1,11 @@
-About hatchling
-===============
+About hatchling-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatchling-feedstock/blob/main/LICENSE.txt)
 
 Home: https://hatch.pypa.io/latest/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatchling-feedstock/blob/main/LICENSE.txt)
 
 Summary: Modern, extensible Python build backend
 
