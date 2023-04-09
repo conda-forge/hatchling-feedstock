@@ -33,6 +33,7 @@ requirements:
     - pluggy >=1.0.0
     - python >=3.7
     - tomli >=1.2.2
+    - trove-classifiers
 
 test:
   imports:
