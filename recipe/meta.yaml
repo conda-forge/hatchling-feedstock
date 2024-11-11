@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatchling-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hatchling-{{ version }}.tar.gz
   sha256: 8d956592e6c5d5df1f591be1e97a941c7b9ec6fd039f4c8624c29557bac034e9
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
   entry_points:
     - hatchling = hatchling.cli:hatchling
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     # bootstrapping
     - packaging >=24.2
     - pathspec >=0.10.1
@@ -27,6 +27,7 @@ requirements:
     - tomli >=2.0
     - trove-classifiers
   run:
+    - python >={{ python_min }}
     - editables >=0.3
     - importlib-metadata
     - packaging >=24.2
@@ -43,6 +44,7 @@ test:
     - pip check
     - hatchling --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
