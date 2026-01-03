@@ -1,3 +1,4 @@
+{% set python_min = "3.10" %}
 {% set name = "hatchling" %}
 {% set version = "1.28.0" %}
 
@@ -21,16 +22,16 @@ requirements:
     - pip
     - python {{ python_min }}
     # bootstrapping
-    - packaging >=21.3
+    - packaging >=24.2
     - pathspec >=0.10.1
     - pluggy >=1.0.0
-    - tomli >=2.0
+    - tomli >=1.2.2
     - trove-classifiers
   run:
     - python >={{ python_min }}
     - editables >=0.3
     - importlib-metadata
-    - packaging >=21.3
+    - packaging >=24.2
     - pathspec >=0.10.1
     - pluggy >=1.0.0
     - python >=3.7
