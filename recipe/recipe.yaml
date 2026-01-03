@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: "1.28.0"
+  python_check_max: "3.14"
+
+package:
+  name: hatchling
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/h/hatchling/hatchling-${{ version }}.tar.gz
+  sha256: 4d50b02aece6892b8cd0b3ce6c82cb218594d3ec5836dbde75bf41a21ab004c8
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - hatchling = hatchling.cli:hatchling
+
+requirements:
+  host:
+    - packaging >=24.2
+    - pathspec >=0.10.1
+    - pip
+    - pluggy >=1.0.0
+    - python ${{ python_min }}.*
+    - tomli >=1.2.2
+    - trove-classifiers
+  run:
+    - python >=${{ python_min }}
+    - importlib-metadata
+    - packaging >=24.2
+    - pathspec >=0.10.1
+    - pluggy >=1.0.0
+    - python >=${{ python_min }}
+    - tomli >=1.2.2
+    - trove-classifiers
+
+tests:
+  - python:
+      imports: hatchling
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - hatchling --help
+
+about:
+  summary: Modern, extensible Python build backend
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://pypi.org/project/hatchling
+  repository: https://github.com/pypa/hatch/tree/master/backend
+  documentation: https://hatch.pypa.io
+
+extra:
+  recipe-maintainers:
+    - ofek
