@@ -3,13 +3,15 @@ About hatchling-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatchling-feedstock/blob/main/LICENSE.txt)
 
-Home: https://hatch.pypa.io/latest/
+Home: https://pypi.org/project/hatchling
 
 Package license: MIT
 
 Summary: Modern, extensible Python build backend
 
 Development: https://github.com/pypa/hatch/tree/master/backend
+
+Documentation: https://hatch.pypa.io/
 
 Current build status
 ====================
