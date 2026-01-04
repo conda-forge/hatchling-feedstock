@@ -26,7 +26,6 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    # technically hatchling is required but we can't install it in our host environment as otherwise the package won't be picked up properly
     - packaging >=24.2
     - pathspec >=0.10.1
     - pluggy >=1.0.0
