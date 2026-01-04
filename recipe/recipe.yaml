@@ -14,7 +14,7 @@ source:
   sha256: 4d50b02aece6892b8cd0b3ce6c82cb218594d3ec5836dbde75bf41a21ab004c8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -24,16 +24,17 @@ build:
 
 requirements:
   host:
+    - pip
+    - python ${{ python_min }}.*
+    # technically hatchling is required but we can't install it in our host environment as otherwise the package won't be picked up properly
     - packaging >=24.2
     - pathspec >=0.10.1
-    - pip
     - pluggy >=1.0.0
-    - python ${{ python_min }}.*
     - tomli >=1.2.2
     - trove-classifiers
   run:
     - python >=${{ python_min }}
-    - importlib-metadata
+    - editables >=0.3
     - packaging >=24.2
     - pathspec >=0.10.1
     - pluggy >=1.0.0
