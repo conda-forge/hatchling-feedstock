@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.32.0"
+  version: "1.32.3"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/h/hatchling/hatchling-${{ version }}.tar.gz
-  sha256: 0bdbde4a52b06c37e3eca395f85a762bf0ef06fe374fd8ae429dc6be10230f5f
+  sha256: acdd4436d84d829c6e7ae6df723241d8f0bca9c5bad5a6148bd41f2ea6b8a792
 
 build:
   number: 0
@@ -30,7 +30,6 @@ requirements:
     - pluggy >=1.0.0
     - python ${{ python_min }}.*
     - tomlkit >=0.11.1
-    - tomli >=1.2.2
     - trove-classifiers
   run:
     - packaging >=24.2
@@ -38,7 +37,6 @@ requirements:
     - pluggy >=1.0.0
     - python >=${{ python_min }}
     - tomlkit >=0.11.1
-    - tomli >=1.2.2
     - trove-classifiers
     # undeclared, but breaks editable installs without
     - editables >=0.3
