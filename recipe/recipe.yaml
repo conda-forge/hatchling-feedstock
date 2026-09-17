@@ -30,7 +30,6 @@ requirements:
     - pluggy >=1.0.0
     - python ${{ python_min }}.*
     - tomlkit >=0.11.1
-    - tomli >=1.2.2
     - trove-classifiers
   run:
     - packaging >=24.2
@@ -38,7 +37,6 @@ requirements:
     - pluggy >=1.0.0
     - python >=${{ python_min }}
     - tomlkit >=0.11.1
-    - tomli >=1.2.2
     - trove-classifiers
     # undeclared, but breaks editable installs without
     - editables >=0.3
