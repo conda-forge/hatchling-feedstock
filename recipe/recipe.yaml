@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.32.3"
+  version: "1.32.4"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/h/hatchling/hatchling-${{ version }}.tar.gz
-  sha256: acdd4436d84d829c6e7ae6df723241d8f0bca9c5bad5a6148bd41f2ea6b8a792
+  sha256: c4468f73144c054d2aab4ef0f0378c43b9878bf07f8ffd6b79690e970d375f07
 
 build:
   number: 0
